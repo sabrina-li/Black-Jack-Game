@@ -1,0 +1,46 @@
+:root { 
+    --width: 150px; 
+    --height:230px;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+#deck{
+    text-align: center
+
+}
+img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width:  var(--width);
+    height: var(--height);    
+}
+h1{
+    animation : pulse 1s infinite;
+}
+#playerCard,#dealerCard{
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+@keyframes pulse {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.25;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
+}
